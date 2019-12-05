@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from './Board';
+import { connect } from 'react-redux';
 
 
 class App extends React.Component {
@@ -18,5 +19,11 @@ class App extends React.Component {
     }
   }
 
-  export default App;
+  const mapStateToProps = state => {
+    return {
+      squares: state.squares,
+    };
+  };
+
+  export default withRouter(connect(mapStateToProps)(App));
   

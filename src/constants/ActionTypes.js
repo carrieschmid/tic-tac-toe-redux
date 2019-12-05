@@ -1,0 +1,2 @@
+export const RENDER_SQUARES = "RENDER_SQUARES";
+export const CHANGE_PLAYER = "CHANGE_PLAYER";
