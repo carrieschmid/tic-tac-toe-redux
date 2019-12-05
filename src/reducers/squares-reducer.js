@@ -7,16 +7,22 @@ let newState;
     switch (action.type) {
     case c.RENDER_SQUARES:
     newState = Object.assign({}, state, {
-        
+        [id]: {
          squares: squares,
          xIsNext: xIsNext,
-         
-        
+         id: id
+        }
        });
        return newState;
     
+    // case c.CHANGE_PLAYER:
+    // const changePlayer = Object.assign({}, squares[id], {xIsNext});
+    // newState=Object.assign({}, state, {
+    // [id]: changePlayer
+    // });
+    // return newState;
     
-    default:
-    return state;
-    }
+    // default:
+    //  return state;
+    // }
    };
